@@ -1,0 +1,3 @@
+class InfoMailer < ApplicationMailer
+
+end
