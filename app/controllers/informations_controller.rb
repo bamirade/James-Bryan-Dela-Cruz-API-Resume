@@ -1,6 +1,6 @@
-class InformationController < ApplicationController
-  def awake
-    render json: { message: "I'm awake!" }, status: :ok
+class InformationsController < ApplicationController
+  def index
+    render :index
   end
 
   def routes
