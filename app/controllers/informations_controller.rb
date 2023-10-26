@@ -26,10 +26,4 @@ class InformationsController < ApplicationController
   def feedbacks
 
   end
-
-  private
-
-  def feedback_params
-    params.require(:feedback).permit(:first_name, :last_name, :email, :comment)
-  end
 end
