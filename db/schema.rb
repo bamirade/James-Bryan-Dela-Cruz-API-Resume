@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_19_073104) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_27_071616) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "btree_gin"
   enable_extension "btree_gist"
@@ -35,9 +35,51 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_19_073104) do
   enable_extension "uuid-ossp"
   enable_extension "xml2"
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "email"
+    t.string "phone"
+    t.string "gitHub"
+    t.string "linkedIn"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "endpoints", force: :cascade do |t|
+    t.string "description"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string "title"
+    t.string "company"
+    t.string "start_date"
+    t.string "end_date"
+    t.string "responsibility1"
+    t.string "responsibility2"
+    t.string "responsibility3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "feedbacks", force: :cascade do |t|
     t.string "email"
     t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.string "role"
+    t.string "repo"
+    t.string "live"
+    t.string "description"
+    t.string "feature1"
+    t.string "feature2"
+    t.string "feature3"
+    t.string "feature4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
