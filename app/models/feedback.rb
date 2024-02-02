@@ -1,5 +1,4 @@
 class Feedback < ApplicationRecord
-  validates :first_name, presence: true
-  validates :email, presence: true, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i }
-  validates :comments, present: true, length: { maximum: 2000, minimum: 6 }
+  validates :email, presence: true, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i }
+  validates :message, presence: true, length: { maximum: 600, minimum: 6 }
 end

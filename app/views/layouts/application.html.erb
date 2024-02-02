@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>James Bryan Dela Cruz API Resume</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="bg-gray-100">
+  <main class="container mx-auto mt-4 px-4">
+    <%= yield %>
+  </main>
+  <script>
+    function showSnackbar(message) {
+      var snackbar = document.getElementById("snackbar");
+      snackbar.innerHTML = message;
+      snackbar.classList.add("show");
+
+      setTimeout(function () {
+        snackbar.classList.remove("show");
+        snackbar.classList.add("fadeout");
+      }, 3000);
+    }
+
+    const buttons = document.querySelectorAll('.copy-button');
+    buttons.forEach(button => {
+      button.addEventListener('click', (e) => {
+          const copyText = e.target.dataset.text;
+          navigator.clipboard.writeText(copyText);
+          e.target.textContent = 'Copied';
+
+          setTimeout(() => {
+            e.target.textContent = 'Copy';
+          }, 5000);
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-200;
+  }
+}
+
+*/
+
+@layer components {
+  body {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  article {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  .snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    z-index: 9999;
+    left: auto;
+    bottom: 24px;
+    font-size: 14px;
+    border-radius: 4px;
+    opacity: 0;
+    display: grid;
+    justify-content: center;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+  }
+
+  .snackbar.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .snackbar.fadeout {
+    opacity: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

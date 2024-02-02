@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Feedback has been Recieved! 🌟</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+    .confirmation-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #D8C1A9;
+      color: white !important;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .confirmation-button:hover {
+      background-color: #E8D9C2;
+      color: white;
+    }
+    .signature {
+      color: #555;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 Your Feedback has been Received! 🌟</h1>
+    <p>This is a copy of your feedback:</p>
+    <div>
+        <p>Email: <%= @feedback.email %></p>
+        <p>Message: <%= @feedback.message %></p>
+    </div>
+    <p>If you have any questions or need assistance, please don't hesitate to reach out to me via this email address. 🤝</p>
+    <p>*Feedback sent is private and will be kept confidential.</p>
+    <p class="signature">Warm regards,<br>bamirade</p>
+  </div>
+</body>
+</html>

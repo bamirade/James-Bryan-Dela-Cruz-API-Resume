@@ -1,0 +1,155 @@
+<section class="w-full max-w-[900px] my-2 m-auto">
+    <article class="w-full flex flex-1 justify-center bg-white p-8 m-auto my-4">
+        <h1 class="text-2xl mb-5 font-bold">REST API Resume Quick Start</h1>
+        <p class="leading-6">Learn how to access my resume by making a REST API call.</p>
+    </article>
+
+    <article class="w-full flex flex-1 justify-center bg-white p-8 m-auto mb-4">
+        <h2 class="text-2xl mb-5 font-bold">Table of Contents</h2>
+        <ol class="list-decimal">
+            <li class="m-4">
+                <a class="underline" href="#curl">cURL</a>
+            </li>
+            <li class="m-4">
+                <a class="underline"  href="#apiclient">API Client</a>
+            </li>
+            <li class="m-4">
+                <a class="underline"  href="#endpoints">Endpoints</a>
+            </li>
+            <li class="m-4">
+                <a class="underline"  href="#feedback">Contact</a>
+            </li>
+        </ol>
+    </article>
+
+    <article id="curl" class="w-full flex flex-1 justify-center bg-white p-8 m-auto mb-4">
+        <h2 class="text-2xl mb-5 font-bold">via cURL</h2>
+        <p>
+            <a href="https://github.com/curl/curl" target="_blank" class="underline">cURL<i class="fas fa-external-link-alt"></i></a>
+            (Client for URL) is a command-line tool and library for transferring data with URLs. It offers the fastest way to view my API resume</p>
+            <ol class="list-decimal">
+                <li class="m-4">
+                    <p class="leading-6">To ensure that cURL is installed on your machine. In your command-line interface (CLI), execute:</p>
+                    <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+                        <code class="text-white overflow-auto">curl --version</code>
+                        <button class="p-2 bg-gray-800 text-white copy-button" data-text="curl --version">Copy</button>
+                    </div>
+                    <p class="leading-6 mt-4">You should see some output information regarding the version of cURL installed on your machine. If not, you should get a message indicating that you do not have cURL installed. You may download and install <a href="https://curl.se/download.html" target="_blank" class="underline">cURL<i class="fas fa-external-link-alt"></i></a> or use another method to view my API Resume.</p>
+                </li>
+                <li class="m-4">
+                    <p class="leading-6">Once you have verified that cURL is installed, execute the following code in the command-line interface:</p>
+                    <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+                        <code class="text-white break-all">curl -k https://james-bryan-dela-cruz-api-resume.onrender.com/api</code>
+                        <button class="p-2 bg-gray-800 text-white copy-button" data-text="curl -k https://james-bryan-dela-cruz-api-resume.onrender.com/api">Copy</button>
+                    </div>
+                </li>
+                <li class="m-4">
+                    <p class="leading-6">The <strong>/api</strong> endpoint will list the available endpoints for you, or you can explore them <a class="underline"  href="#endpoints">here</a>.</p>
+                </li>
+            </ol>
+    </article>
+
+    <article id="apiclient" class="w-full flex flex-1 justify-center bg-white p-8 m-auto mb-4">
+        <h2 class="text-2xl mb-5 font-bold">via API Client</h2>
+        <p class="leading-6">API clients like
+            <a href="https://www.postman.com/" target="_blank" class="underline">Postman<i class="fas fa-external-link-alt"></i></a>
+            and
+            <a href="https://insomnia.rest/" target="_blank" class="underline">Insomnia<i class="fas fa-external-link-alt"></i></a>
+            allow for interacting with APIs using a graphic user interface that make it easier to test API endpoints. I personally <strong>recommend</strong> using this method to view my API resume for its user-friendly interface and comprehensive testing capabilities
+        </p>
+        <ol class="list-decimal">
+            <li class="m-4">
+                <p class="leading-6">
+                     Download and install the API client of your choice. In this demonstration, I will be using
+                     <a href="https://www.postman.com/downloads/" target="_blank" class="underline">Postman<i class="fas fa-external-link-alt"></i></a>.
+                </p>
+            </li>
+            <li class="m-4">
+                <p class="leading-6">
+                    Open your API client, create a new workspace, and navigate to make an HTTP request.
+                </p>
+            </li>
+            <li class="m-4">
+                <p class="leading-6 mb-4">Select <span class="p-2 bg-black text-white font-semibold rounded">GET</span> and enter the following in the URL input:</p>
+                <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+                    <code class="text-white break-all">https://james-bryan-dela-cruz-api-resume.onrender.com/api</code>
+                    <button class="p-2 bg-gray-800 text-white copy-button" data-text="https://james-bryan-dela-cruz-api-resume.onrender.com/api">Copy</button>
+                </div>
+                <p class="leading-6 mt-4">and then click  <span class="p-2 bg-black text-white font-semibold rounded">Send</span> to make a request.</p>
+            </li>
+            <li class="m-4">
+                <p class="leading-6">You can then view the JSON response in you API client. The <strong>/api</strong> endpoint will list the available endpoints for you, or you can explore them <a class="underline"  href="#endpoints">here</a>.</p>
+            </li>
+        </ol>
+    </article>
+
+    <article id="endpoints" class="w-full flex flex-1 justify-center bg-white p-8 m-auto mb-4">
+        <h2 class="text-2xl mb-5 font-bold">Endpoints</h2>
+        <p class="leading-6">Once you are set with an API client or cURL, you can explore my API resume using various endpoints. Endpoints are different URLs where you can make <span class="p-2 bg-black text-white font-semibold rounded">GET</span> requests to view different parts of my resume.</p>
+        <p class="leading-6 mt-4">Explore my API resume using the following available endpoints:</p>
+        <ol class="list-decimal">
+            <li class="m-4">
+                <p class="leading-6"><strong>/api:</strong> Displays a list of all accessible routes.</p>
+                <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+                    <code class="text-white break-all">https://james-bryan-dela-cruz-api-resume.onrender.com/api</code>
+                    <button class="p-2 bg-gray-800 text-white copy-button" data-text="https://james-bryan-dela-cruz-api-resume.onrender.com/api">Copy</button>
+                </div>
+            </li>
+            <li class="m-4">
+                <p class="leading-6"><strong>/api/resume:</strong> View full resume profile.</p>
+                <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+                    <code class="text-white break-all">https://james-bryan-dela-cruz-api-resume.onrender.com/api/resume</code>
+                    <button class="p-2 bg-gray-800 text-white copy-button" data-text="https://james-bryan-dela-cruz-api-resume.onrender.com/api/resume">Copy</button>
+                </div>
+            </li>
+            <li class="m-4">
+                <p class="leading-6"><strong>/api/project:</strong> Access information about my projects.</p>
+                <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+                    <code class="text-white break-all">https://james-bryan-dela-cruz-api-resume.onrender.com/api/project</code>
+                    <button class="p-2 bg-gray-800 text-white copy-button" data-text="https://james-bryan-dela-cruz-api-resume.onrender.com/api/project">Copy</button>
+                </div>
+            </li>
+            <li class="m-4">
+                <p class="leading-6"><strong>/api/experience:</strong> Learn about my past career experience.</p>
+                <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+                    <code class="text-white break-all">https://james-bryan-dela-cruz-api-resume.onrender.com/api/experience</code>
+                    <button class="p-2 bg-gray-800 text-white copy-button" data-text="https://james-bryan-dela-cruz-api-resume.onrender.com/api/experience">Copy</button>
+                </div>
+            </li>
+            <li class="m-4">
+                <p class="leading-6"><strong>/api/contact:</strong> Access my preferred contact details.</p>
+                <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+                    <code class="text-white break-all">https://james-bryan-dela-cruz-api-resume.onrender.com/api/contact</code>
+                    <button class="p-2 bg-gray-800 text-white copy-button" data-text="https://james-bryan-dela-cruz-api-resume.onrender.com/api/contact">Copy</button>
+                </div>
+            </li>
+        </ol>
+        <p class="leading-6 my-2">You can also make a <span class="p-2 bg-black text-white font-semibold rounded">POST</span> request for feedback to endpoint:</p>
+        <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+            <code class="text-white break-all">https://james-bryan-dela-cruz-api-resume.onrender.com/api/feedback</code>
+            <button class="p-2 bg-gray-800 text-white copy-button" data-text="https://james-bryan-dela-cruz-api-resume.onrender.com/api/feedback">Copy</button>
+        </div>
+        <p class="leading-6 mt-2">Sending a JSON format as the body of your request:</p>
+        <div class="flex items-center mt-2 bg-black rounded justify-between p-3">
+            <code class="text-white w-full flex justify-between items-center">
+                <pre class="text-white overflow-auto">
+{
+    "email": "youremail@yourdomain.com",
+    "message": "Feel free to write your own message here."
+}
+</pre>
+                    <button class="p-2 bg-gray-800 text-white copy-button max-h-10" data-text="{&quot;email&quot;: &quot;youremail@yourdomain.com&quot;, &quot;message&quot;: &quot;Feel free to write your own message here.&quot;}">Copy</button>
+            </code>
+        </div>
+        <p class="leading-6 mt-4 flex">
+            <strong class="mr-2">Note:</strong>
+            Messages are limited to 600 characters.<br>You may also receive a copy of your feedback through the email you provided.</p>
+    </article>
+
+    <article id="feedback" class="w-full flex flex-1 justify-center bg-white p-8 m-auto mb-4">
+        <h2 class="text-2xl mb-5 font-bold">Contact</h2>
+        <p class="leading-6">Thanks for checking out my API Resume. If you have any questions, you can email me at <br><a href="mailto:delacruzjamesbryan553@gmail.com" target="_blank" class="underline break-all">delacruzjamesbryan553@gmail.com</a></p>
+        <strong class="mt-2">Useful Links:</strong>
+        <p class="leading-6"><a href="https://github.com/bamirade/" target="_blank" class="underline">GitHub</a> <a href="https://www.linkedin.com/in/jamesbryandelacruz/" target="_blank" class="underline">LinkedIn</a></p>
+    </article>
+</section>
